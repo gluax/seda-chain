@@ -19,7 +19,8 @@ ENV DAEMON_ALLOW_DOWNLOAD_BINARIES=false
 # Copy the sedad binary
 COPY ./build/sedad-${TARGETARCH} /usr/local/bin/sedad
 # Copy the docker-entrypoint.sh
-COPY ./dockerfiles/docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
+COPY scripts/docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
+RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 # Copy the cosmovisor from the builder
 COPY --from=builder /go/bin/cosmovisor /usr/local/bin/cosmovisor
 
