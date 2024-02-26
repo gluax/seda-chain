@@ -31,9 +31,6 @@ RUN adduser -D $USER
 USER $USER
 WORKDIR $HOME
 
-# Change user and working directory
-USER $USER
-WORKDIR $HOME
 
 VOLUME $HOME/.sedad
 

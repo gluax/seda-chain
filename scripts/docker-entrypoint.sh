@@ -9,7 +9,7 @@ if
 	[ ! -d "$SEDA_DIR/cosmovisor" ]
 then
 	echo "Creating cosmovisor directory and initializing"
-	mkdir "$SEDA_DIR/cosmovisor"
+	mkdir -p "$SEDA_DIR/cosmovisor"
 	cosmovisor init /usr/local/bin/sedad
 fi
 
