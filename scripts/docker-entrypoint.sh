@@ -4,6 +4,7 @@ set -e
 SEDA_DIR=$HOME/.sedad
 CONFIG_DIR=$HOME/.sedad/config
 DATA_DIR=$HOME/.sedad/data
+NETWORK=${NETWORK:-testnet}
 
 if
 	[ ! -d "$SEDA_DIR/cosmovisor" ]

@@ -7,10 +7,8 @@ RUN go install github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor@latest && 
 FROM alpine:latest
 
 ARG TARGETARCH
-ARG NETWORK="testnet"
 ARG USER=seda
 
-ENV NETWORK=${NETWORK}
 ENV CGO_ENABLED=0
 ENV DAEMON_HOME=/home/$USER/.sedad
 ENV DAEMON_NAME=sedad
